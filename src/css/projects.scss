@@ -1,0 +1,107 @@
+.projects{
+  position: relative;
+  margin: 93px 0 130px;
+  text-align: center;
+  &__title{
+    @include text($gar, normal, 700, 40px, 45px, $milk)
+  }
+  &__line{
+    margin: 23px 0 34px;
+    border-radius: 50px;
+    background-color: $milk;
+    border: 1px solid $milk;
+  }
+  &__cards{
+    column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__card{
+    min-width: 300px;
+    z-index: 100;
+    &-title{
+      @include text($gar, normal, 700, 16px, 18px, white);
+      margin: 26px 0 7px;
+    }
+    &-subtitle{
+      @include text($gar, normal, 400, 14px, 16px, white);
+      margin-bottom: 34px;
+    }
+  }
+  &__btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 75px;
+    &-btn{
+      margin-top: 54px;
+      background-color: $black;
+      width: 220px;
+      min-height: 62px;
+      border: 1px solid $milk;
+      border-radius: 5px;
+      @include text($gar, normal, 400, 14px, 16px, $milk);
+      transition: 0.3s;
+      cursor: pointer;
+      &_active{
+        background-color: $milk;
+        color: $black;
+      }
+      &:hover {
+        background-color: $milk;
+        color: $black;
+        transition: 0.3s;
+      }
+    }
+  }
+  &__after{
+    position: absolute;
+    right: 0;
+    bottom: 270px;
+    font-family: $rob;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 105px;
+    background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.65) -43.79%, rgba(222, 211, 109, 0) 52.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: .7s;
+    &:hover {
+      transition: .7s;
+      background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.75) -43.79%, rgba(222, 211, 109, 0.2) 52.43%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  &__before{
+    position: absolute;
+    left: 0;
+    top: 705px;
+    font-family: $rob;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 105px;
+    background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.65) -43.79%, rgba(222, 211, 109, 0) 52.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: .7s;
+    z-index: 1;
+    &:hover {
+      transition: .7s;
+      background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.75) -43.79%, rgba(222, 211, 109, 0.2) 52.43%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

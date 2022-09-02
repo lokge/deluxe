@@ -1,0 +1,65 @@
+.header{
+  padding: 13px 0 20px;
+  background-color: $black;
+  z-index: 7;
+  &__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title{
+    @include text($rob, normal, 400, 20px, 23px, $milk);
+    background: linear-gradient(106.99deg, #E0DEDE 24.92%, #A2A0A0 53.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__list{
+    display: flex;
+    column-gap: 35px;
+    &-item{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 77px;
+      row-gap: 10px;
+      @include text($rob, normal, 400, 14px, 16px, $milk);
+      position: relative;
+      transition: 0.2s;
+      &:hover{
+        color: white;
+        transition: 0.2s;
+      }
+     &::before{
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        bottom: -10px;
+        left: -15px;
+        transition: 0.5s;
+      }
+      &:hover::before{
+        width: calc(100% + 30px);
+      }
+      &-open > &-text{
+        display: inline-block;
+      }
+    }
+  }
+  &__contact{
+    display: flex;
+    column-gap: 13px;
+    align-items: center;
+    &-num{
+      @include text($rob, normal, 400, 20px, 23px, $milk);
+      background: linear-gradient(106.99deg, #E0DEDE 24.92%, #A2A0A0 53.57%), #DCD7C0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

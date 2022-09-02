@@ -1,0 +1,61 @@
+.home{
+  position: relative;
+  padding: 185px 0 249px;
+  margin-left: 96px;
+  background: url("../images/HomeBG.png") center/cover no-repeat;
+  &__title{
+    @include text($gar, normal, 700, 50px, 62px, white);
+    text-align: center;
+  }
+  &__subtitle{
+    @include text($rob, normal, 400, 20px, 32px, white);
+    text-align: center;
+    margin: 22px 0 10px;
+  }
+  &__btn{
+    padding: 23px 50px;
+    background: white;
+    border-radius: 50px;
+    font-family: $rob;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #191919;
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+  &__logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate (-50% -50%);
+    z-index: 7;
+  }
+  &__after{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+
+    font-family: $rob;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 105px;
+    background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.65) -43.79%, rgba(222, 211, 109, 0) 52.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: .7s;
+    &:hover{
+      transition: .7s;
+      background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.75) -43.79%, rgba(222, 211, 109, 0.2) 52.43%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}
